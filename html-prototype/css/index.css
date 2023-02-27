@@ -6,11 +6,23 @@
   font-family: 'Source Sans Pro', sans-serif !important;
 }
 
-.banner {
-  background-color: rgb(103, 58, 183);
-  margin-top: 10px;
+.banner-color {
+  background-color: rgb(255,171,64);
+  margin-top: 35px;
+  margin-bottom: 35px;
   padding-top: 10px;
   padding-bottom: 20px;
+}
+
+.banner-white {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.card-text {
+  text-align: center !important;
+  color: whitesmoke !important;
+  padding-top: 15lvh;
 }
 
 .hero-image {
