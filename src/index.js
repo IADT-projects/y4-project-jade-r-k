@@ -7,7 +7,7 @@ import './css/App.css';
 
 //fonts
 import '@fontsource/playfair-display';
-import '@fontsource/source-sans-pro';
+import '@fontsource/source-sans-pro/300.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
