@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { CssBaseline } from '@mui/material';
 
+//fonts
 import '@fontsource/playfair-display/300.css';
 import '@fontsource/playfair-display/400.css';
 import '@fontsource/playfair-display/500.css';
