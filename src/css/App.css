@@ -10,5 +10,5 @@
     text-align: center;
 }
 .center {
-    align-self: center;
+    justify-content: center;
 }
