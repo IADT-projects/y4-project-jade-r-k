@@ -1,8 +1,16 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
+//pages
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div></div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
