@@ -16,6 +16,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        {/* Routes to pages */}
         <Route path='/' element={<Home />} />
 
         <Route path='/static/' element={<StaticHome />} />
