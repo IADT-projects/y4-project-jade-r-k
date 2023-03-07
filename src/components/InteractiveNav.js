@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
-import { styled, useTheme } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
@@ -31,8 +31,6 @@ const InteractiveNav = () => {
       const handleDrawerClose = () => {
         setOpen(false);
       };
-
-      const theme = useTheme();
 
       const DrawerHeader = styled('div')(({ theme }) => ({
         display: 'flex',
@@ -58,7 +56,7 @@ const InteractiveNav = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className="f1" variant="h4" component="div" sx={{ flexGrow: 1 }}>
+          <Typography className="f1 center-text" variant="h4" component="div" sx={{ flexGrow: 1 }}>
             INTERACTIVE
           </Typography>
           <Button className="f2" component={Link} to='/static/' color="inherit" variant="outlined">Static</Button>
