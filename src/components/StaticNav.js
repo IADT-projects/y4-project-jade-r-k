@@ -8,7 +8,7 @@ const StaticNav = () => {
         <AppBar position="static">
             <Toolbar>
                 <Typography className="f1" variant="h4" component="div" sx={{ flexGrow: 1 }}>
-                    Static
+                    STATIC
                     </Typography>
                     <Stack spacing={2} direction="row">
                         <Button className="f2" component={Link} to='/static/' color="inherit">Home</Button>
