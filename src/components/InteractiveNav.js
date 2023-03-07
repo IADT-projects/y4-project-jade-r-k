@@ -46,7 +46,7 @@ const InteractiveNav = () => {
     return (
         <>
         <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" open={open}>
+      <AppBar position='fixed' open={open}>
         <Toolbar>
           <IconButton
             size="large"
