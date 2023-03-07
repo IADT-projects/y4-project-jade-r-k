@@ -1,15 +1,14 @@
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
+
 const Hero = () => {
     return (
         <>
         <div class="hero-image">
                         <div class="hero-text">
-                            <h1 class="p1">Welcome to the Static Design</h1>
-                            <h3 class="p2">View artwork in the gallery</h3>
-                            <a href="pages/static/gallery.html">
-                            <button class="p2 mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                                Gallery
-                            </button>
-                        </a>
+                            <h1 class="f1">Welcome to the Static Design</h1>
+                            <h3 class="f2">View artwork in the gallery</h3>
+                            <Button className="f2" component={Link} to='/static/gallery' variant="contained">Gallery</Button>
                         </div>
                     </div>
         </>
