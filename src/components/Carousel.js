@@ -1,5 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
+import { Button } from '@mui/material';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 
 const CarouselComponent = () => {
     return (
@@ -12,8 +14,11 @@ const CarouselComponent = () => {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <h1 class="f1">Welcome to the Interactive Design</h1>
+        <h3 class="f2">View artwork in the gallery</h3>
+        <Button className="f2" component={Link} to='/interactive/gallery' variant="contained">Gallery</Button>
+        <br></br>
+        <br></br>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -22,10 +27,11 @@ const CarouselComponent = () => {
           src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60"
           alt="Second slide"
         />
-
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h3 class="f2">Reach out using the contact form</h3>
+        <Button className="f2" component={Link} to='/interactive/form' variant="contained">Contact Form</Button>
+        <br></br>
+        <br></br>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -36,10 +42,10 @@ const CarouselComponent = () => {
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+        <h3 class="f2">Check out the static design</h3>
+        <Button className="f2" component={Link} to='/static/' variant="contained">Static</Button>
+        <br></br>
+        <br></br>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
