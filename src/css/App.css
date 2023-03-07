@@ -27,3 +27,9 @@
     padding-top: 35lvh;
     color: whitesmoke;
 }
+
+.banner-white {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    text-align: center;
+  }
