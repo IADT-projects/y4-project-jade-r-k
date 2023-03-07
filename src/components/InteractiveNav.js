@@ -18,8 +18,9 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+
+import { Home, Apps, Feed, Close } from '@mui/icons-material';
+import LinkIcon from '@mui/icons-material/Link';
 
 const InteractiveNav = () => {
 
@@ -41,7 +42,7 @@ const InteractiveNav = () => {
         padding: theme.spacing(0, 1),
         // necessary for content to be below app bar
         ...theme.mixins.toolbar,
-        justifyContent: 'flex-end',
+        justifyContent: 'flex-start',
       }));
 
     return (
@@ -80,27 +81,42 @@ const InteractiveNav = () => {
       >
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+            <Close/>
           </IconButton>
+          <Typography className="f1" variant="h4" component="div" sx={{ flexGrow: 1 }}>
+            INTERACTIVE
+          </Typography>
         </DrawerHeader>
         <Divider />
         <List>
             <ListItem>
                 <ListItemButton component={Link} to='/interactive/'>
-                    <ListItemIcon></ListItemIcon>
-                    <ListItemText>Home</ListItemText>
+                    <ListItemIcon><Home/></ListItemIcon>
+                    <ListItemText>
+                    <Typography className="f2">
+            HOME
+          </Typography>
+                    </ListItemText>
                 </ListItemButton>
             </ListItem>
             <ListItem>
                 <ListItemButton component={Link} to='/interactive/gallery'>
-                    <ListItemIcon></ListItemIcon>
-                    <ListItemText>Gallery</ListItemText>
+                    <ListItemIcon><Apps/></ListItemIcon>
+                    <ListItemText>
+                    <Typography className="f2">
+            GALLERY
+          </Typography>
+                    </ListItemText>
                 </ListItemButton>
             </ListItem>
             <ListItem>
                 <ListItemButton component={Link} to='/interactive/form'>
-                    <ListItemIcon></ListItemIcon>
-                    <ListItemText>Contact Form</ListItemText>
+                    <ListItemIcon><Feed/></ListItemIcon>
+                    <ListItemText>
+                    <Typography className="f2">
+            CONTACT FORM
+          </Typography>
+                    </ListItemText>
                 </ListItemButton>
             </ListItem>
         </List>
@@ -108,8 +124,12 @@ const InteractiveNav = () => {
         <List>
         <ListItem>
                 <ListItemButton component={Link} to='/static/'>
-                    <ListItemIcon></ListItemIcon>
-                    <ListItemText>Static</ListItemText>
+                    <ListItemIcon><LinkIcon/></ListItemIcon>
+                    <ListItemText>
+                    <Typography className="f2">
+            STATIC
+          </Typography>
+                    </ListItemText>
                 </ListItemButton>
             </ListItem>
         </List>
