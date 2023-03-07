@@ -4,10 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const CarouselComponent = () => {
     return (
         <>
-        <Carousel>
+        <Carousel fade interval={4500}>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="d-block w-100" height={660}
           src="https://images.unsplash.com/photo-1645680827507-9f392edae51c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60"
           alt="First slide"
         />
@@ -18,7 +18,7 @@ const CarouselComponent = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="d-block w-100" height={660}
           src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60"
           alt="Second slide"
         />
@@ -30,7 +30,7 @@ const CarouselComponent = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="d-block w-100" height={660}
           src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YXJ0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60"
           alt="Third slide"
         />
