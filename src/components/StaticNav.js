@@ -11,10 +11,10 @@ const StaticNav = () => {
                     Static
                     </Typography>
                     <Stack spacing={2} direction="row">
-                        <Button component={Link} to='/static/' color="inherit">Home</Button>
-                        <Button component={Link} to='/static/gallery' color="inherit">Gallery</Button>
-                        <Button component={Link} to='/static/form' color="inherit">Contact Form</Button>
-                        <Button component={Link} to='/interactive/' color="inherit" variant="outlined">Interactive</Button>
+                        <Button className="f2" component={Link} to='/static/' color="inherit">Home</Button>
+                        <Button className="f2" component={Link} to='/static/gallery' color="inherit">Gallery</Button>
+                        <Button className="f2" component={Link} to='/static/form' color="inherit">Contact Form</Button>
+                        <Button className="f2" component={Link} to='/interactive/' color="inherit" variant="outlined">Interactive</Button>
                     </Stack>
             </Toolbar>
         </AppBar>

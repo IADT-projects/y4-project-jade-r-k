@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from "react-router-dom";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -58,10 +59,10 @@ const InteractiveNav = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography className="f1" variant="h4" component="div" sx={{ flexGrow: 1 }}>
             INTERACTIVE
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button className="f2" component={Link} to='/static/' color="inherit" variant="outlined">Static</Button>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -84,29 +85,33 @@ const InteractiveNav = () => {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
+            <ListItem>
+                <ListItemButton component={Link} to='/interactive/'>
+                    <ListItemIcon></ListItemIcon>
+                    <ListItemText>Home</ListItemText>
+                </ListItemButton>
             </ListItem>
-          ))}
+            <ListItem>
+                <ListItemButton component={Link} to='/interactive/gallery'>
+                    <ListItemIcon></ListItemIcon>
+                    <ListItemText>Gallery</ListItemText>
+                </ListItemButton>
+            </ListItem>
+            <ListItem>
+                <ListItemButton component={Link} to='/interactive/form'>
+                    <ListItemIcon></ListItemIcon>
+                    <ListItemText>Contact Form</ListItemText>
+                </ListItemButton>
+            </ListItem>
         </List>
         <Divider />
         <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
+        <ListItem>
+                <ListItemButton component={Link} to='/static/'>
+                    <ListItemIcon></ListItemIcon>
+                    <ListItemText>Static</ListItemText>
+                </ListItemButton>
             </ListItem>
-          ))}
         </List>
       </Drawer>
     </Box>
