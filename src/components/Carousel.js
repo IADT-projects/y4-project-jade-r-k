@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const CarouselComponent = () => {
     return (
         <>
-        <Carousel fade interval={4500}>
+        <Carousel fade interval={3500}>
       <Carousel.Item>
         <img
           className="d-block w-100" height={660}
