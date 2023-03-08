@@ -27,7 +27,7 @@ const StaticCards = () => {
                 <br></br>
                 <br></br>
                 <br></br>
-              <Button className="f2" component={Link} to='/static/gallery' variant="contained">Contact Form</Button>
+              <Button className="f2" component={Link} to='/static/form' variant="contained">Contact Form</Button>
               </Card.Body>
             </Card.ImgOverlay>
           </Card>

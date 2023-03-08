@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 
+
 const InteractiveCards = () => {
     return (
         <>
@@ -15,7 +16,7 @@ const InteractiveCards = () => {
                 <br></br>
                 <br></br>
                 <br></br>
-              <Button className="f2" component={Link} to='/static/gallery' variant="contained">Gallery</Button>
+              <Button className="f2" component={Link} to='/interactive/gallery' variant="contained">Gallery</Button>
               </Card.Body>
             </Card.ImgOverlay>
           </Card>
@@ -27,7 +28,7 @@ const InteractiveCards = () => {
                 <br></br>
                 <br></br>
                 <br></br>
-              <Button className="f2" component={Link} to='/static/gallery' variant="contained">Contact Form</Button>
+              <Button className="f2" component={Link} to='/interactive/form' variant="contained">Contact Form</Button>
               </Card.Body>
             </Card.ImgOverlay>
           </Card>
@@ -39,7 +40,7 @@ const InteractiveCards = () => {
                 <br></br>
                 <br></br>
                 <br></br>
-              <Button className="f2" component={Link} to='/interactive/' variant="contained">Interactive</Button>
+              <Button className="f2" component={Link} to='/static/' variant="contained">Static</Button>
               </Card.Body>
             </Card.ImgOverlay>
           </Card>
