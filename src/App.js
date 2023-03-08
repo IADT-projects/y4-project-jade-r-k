@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 //pages
 import Home from './pages/Home';
-
+import Static from './pages/Static';
+import Interactive from './pages/Interactive'
 
 function App() {
   return (
@@ -10,6 +10,8 @@ function App() {
       <Routes>
         {/* Routes to pages */}
         <Route path='/' element={<Home />} />
+        <Route path='/static/' element={<Static />} />
+        <Route path='/interactive/' element={<Interactive />} />
       </Routes>
     </Router>
   );
