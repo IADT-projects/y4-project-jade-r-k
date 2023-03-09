@@ -14,8 +14,9 @@ const Static = () => {
     return (
         <>
         <br/>
-        <Container>
+        <Container style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%'}}>
         <Form>
+            <Col xs={12} sm={12} md={10} lg={10} xl={10} xxl={10}>
             <Card>
                 <Card.Body>
                     <Card.Text>1/4</Card.Text>
@@ -138,15 +139,15 @@ const Static = () => {
                     <Form.Group>
                 <Form.Label>When would you like your cover to start?</Form.Label>
                 <Row xs={3}>
-                    <Col xs={2} sm={2} md={1}>
+                    <Col xs={2} sm={2} md={2} lg={2} xl={2} xxl={2}>
                     <Form.Label className="text-muted">Day</Form.Label>
                 <Form.Control type="input" placeholder='DD' />
                 </Col>
-                <Col xs={2} sm={2} md={1}>
+                <Col xs={2} sm={2} md={2} lg={2} xl={2} xxl={2}>
                 <Form.Label className="text-muted">Month</Form.Label>
                 <Form.Control type="input" placeholder='MM' />
                 </Col>
-                <Col xs={2} sm={2} md={1}>
+                <Col xs={2} sm={2} md={2} lg={2} xl={2} xxl={2}>
                 <Form.Label className="text-muted">Year</Form.Label>
                 <Form.Control type="input" placeholder='YYYY' />
                 </Col>
@@ -294,15 +295,15 @@ const Static = () => {
             <Form.Group>
                 <Form.Label>Date of birth</Form.Label>
                 <Row xs={3}>
-                    <Col xs={2} sm={2} md={1}>
+                    <Col xs={2} sm={2} md={2} lg={2} xl={2} xxl={2}>
                     <Form.Label className="text-muted">Day</Form.Label>
                 <Form.Control type="input" placeholder='DD' />
                 </Col>
-                <Col xs={2} sm={2} md={1}>
+                <Col xs={2} sm={2} md={2} lg={2} xl={2} xxl={2}>
                 <Form.Label className="text-muted">Month</Form.Label>
                 <Form.Control type="input" placeholder='MM' />
                 </Col>
-                <Col xs={2} sm={2} md={1}>
+                <Col xs={2} sm={2} md={2} lg={2} xl={2} xxl={2}>
                 <Form.Label className="text-muted">Year</Form.Label>
                 <Form.Control type="input" placeholder='YYYY' />
                 </Col>
@@ -330,6 +331,7 @@ const Static = () => {
             <br/>
             </Card.Footer>
             </Card>
+            </Col>
         </Form>
         <br/>
         </Container>
