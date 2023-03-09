@@ -9,6 +9,7 @@ import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+
 const Static = () => {
 
     return (
@@ -43,6 +44,8 @@ const Static = () => {
             <br/>
             <Form.Group>
                 <Form.Label>What type of building is it?</Form.Label>
+                <Row>
+                    <Col xs={6}>
                     <Form.Select aria-label="Default select example">
                         <option></option>
                         <option>Detached Bungalow</option>
@@ -52,10 +55,14 @@ const Static = () => {
                         <option>Terraced House</option>
                         <option>Other</option>
                     </Form.Select>
+                    </Col>
+                    </Row>
             </Form.Group>
             <br/>
             <Form.Group>
                 <Form.Label>When was it built?</Form.Label>
+                <Row>
+                    <Col xs={4}>
                     <Form.Select aria-label="Default select example">
                         <option></option>
                         <option>2020 - 2029</option>
@@ -71,6 +78,8 @@ const Static = () => {
                         <option>1920 - 1929</option>
                         <option>Pre 1920</option>
                     </Form.Select>
+                    </Col>
+                    </Row>
             </Form.Group>
             <br/>
             <Form.Group>
@@ -139,15 +148,15 @@ const Static = () => {
                     <Form.Group>
                 <Form.Label>When would you like your cover to start?</Form.Label>
                 <Row xs={3}>
-                    <Col xs={2} sm={2} md={2} lg={2} xl={2} xxl={2}>
+                    <Col xs={2}>
                     <Form.Label className="text-muted">Day</Form.Label>
                 <Form.Control type="input" placeholder='DD' />
                 </Col>
-                <Col xs={2} sm={2} md={2} lg={2} xl={2} xxl={2}>
+                <Col xs={2}>
                 <Form.Label className="text-muted">Month</Form.Label>
                 <Form.Control type="input" placeholder='MM' />
                 </Col>
-                <Col xs={2} sm={2} md={2} lg={2} xl={2} xxl={2}>
+                <Col xs={2}>
                 <Form.Label className="text-muted">Year</Form.Label>
                 <Form.Control type="input" placeholder='YYYY' />
                 </Col>
@@ -172,22 +181,32 @@ const Static = () => {
             <br/>
             <Form.Group>
                 <Form.Label>What is the approximate rebuilding cost?</Form.Label>
+                <Row>
+                <Col xs={6}>
                 <InputGroup>
                 <InputGroup.Text>€</InputGroup.Text>
                 <Form.Control type="input" />
                 </InputGroup>
+                </Col>
+                </Row>
             </Form.Group>
             <br/>
             <Form.Group>
                 <Form.Label>How much contents cover do you need?</Form.Label>
+                <Row>
+                    <Col xs={6}>
                 <InputGroup>
                 <InputGroup.Text>€</InputGroup.Text>
                 <Form.Control type="input" />
                 </InputGroup>
+                </Col>
+                </Row>
             </Form.Group>
             <br/>
             <Form.Group>
                 <Form.Label>How many years have you had home insurance without making any claims?</Form.Label>
+                    <Row>
+                        <Col xs={8}>
                     <Form.Select aria-label="Default select example">
                         <option></option>
                         <option>0 years - Never held Home Insurance before</option>
@@ -199,6 +218,8 @@ const Static = () => {
                         <option>5 years</option>
                         <option>More than 5 years</option>
                     </Form.Select>
+                    </Col>
+                    </Row>
             </Form.Group>
             <br/>
             </Card.Footer>
@@ -270,10 +291,10 @@ const Static = () => {
                     <ToggleButton variant="outline-secondary" id="title-2" value={2}>
                     MRS
                     </ToggleButton>
-                    <ToggleButton variant="outline-secondary" id="title-3" value={2}>
+                    <ToggleButton variant="outline-secondary" id="title-3" value={3}>
                     MS
                     </ToggleButton>
-                    <ToggleButton variant="outline-secondary" id="title-4" value={2}>
+                    <ToggleButton variant="outline-secondary" id="title-4" value={4}>
                     DR
                     </ToggleButton>
                 </ToggleButtonGroup>
@@ -312,21 +333,27 @@ const Static = () => {
             <br/>
             <Form.Group>
                 <Form.Label>Email address</Form.Label>
+                <Row><Col xs={6}>
                 <Form.Control type="input" />
+                </Col></Row>
             </Form.Group>
             <br/>
             <Form.Group>
                 <Form.Label>Phone number</Form.Label>
+                <Row><Col xs={6}>
                 <Form.Control type="input" />
+                </Col></Row>
             </Form.Group>
             <br/>
             <Form.Group>
                 <Form.Label>What is your occupation?</Form.Label>
+                <Row><Col xs={10}>
                 <Form.Control type="input" />
+                </Col></Row>
             </Form.Group>
             <br/>
-            <Button variant="primary" type="submit">
-                GET A QUOTE
+            <Button style={{width: '100%'}} variant="primary" type="submit">
+                GET A QUOTE <i style={{float: 'right'}}>→</i>
             </Button>
             <br/>
             </Card.Footer>
