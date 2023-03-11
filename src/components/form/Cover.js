@@ -13,18 +13,9 @@ const Cover = () => {
         <br/>
         <Form.Group>
                 <Form.Label>When would you like your cover to start?</Form.Label>
-                <Row xs={3}>
-                    <Col xs={2}>
-                    <Form.Label className="text-muted">Day</Form.Label>
-                <Form.Control type="input" placeholder='DD' />
-                </Col>
-                <Col xs={2}>
-                <Form.Label className="text-muted">Month</Form.Label>
-                <Form.Control type="input" placeholder='MM' />
-                </Col>
-                <Col xs={2}>
-                <Form.Label className="text-muted">Year</Form.Label>
-                <Form.Control type="input" placeholder='YYYY' />
+                <Row>
+                    <Col xs={6}>
+                <Form.Control type="date" placeholder='DD' />
                 </Col>
                 </Row>
             </Form.Group>

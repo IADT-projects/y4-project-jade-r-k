@@ -66,11 +66,15 @@ const IxDForm = () => {
                                     }}
                                     text="Prev"
                                     />
-                                ) : null}
+                                ) : null} {' '}
                                 <FormButton
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    setPage((currPage) => currPage + 1);
+                                    if (page === FormTitle.length) {
+                                        window.location.reload();
+                                      } else {
+                                        setPage((currPage) => currPage + 1);
+                                      }
                                 }}
                                 text={page !== 3 ? "Next" : "Get your quote"}
                                 />

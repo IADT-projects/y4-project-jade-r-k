@@ -2,10 +2,6 @@ import Form from 'react-bootstrap/Form';
 import React from 'react';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
-import Container from 'react-bootstrap/Container';
-import InputGroup from 'react-bootstrap/InputGroup';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 const Personal = () => {
@@ -48,17 +44,8 @@ const Personal = () => {
             <Form.Group>
                 <Form.Label>Date of birth</Form.Label>
                 <Row xs={3}>
-                    <Col xs={2} sm={2} md={2} lg={2} xl={2} xxl={2}>
-                    <Form.Label className="text-muted">Day</Form.Label>
-                <Form.Control type="input" placeholder='DD' />
-                </Col>
-                <Col xs={2} sm={2} md={2} lg={2} xl={2} xxl={2}>
-                <Form.Label className="text-muted">Month</Form.Label>
-                <Form.Control type="input" placeholder='MM' />
-                </Col>
-                <Col xs={2} sm={2} md={2} lg={2} xl={2} xxl={2}>
-                <Form.Label className="text-muted">Year</Form.Label>
-                <Form.Control type="input" placeholder='YYYY' />
+                    <Col xs={6}>
+                <Form.Control type="date" />
                 </Col>
                 </Row>
             </Form.Group>

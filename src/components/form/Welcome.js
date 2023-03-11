@@ -2,7 +2,9 @@ const Welcome = () => {
 
     return (
         <>
-        <h4>Thank you for taking part in the study</h4>
+        <br/>
+        <h3 style={{textAlign: 'center'}}>Thank you for taking part in the study</h3>
+        <br/>
         </>
     );
   };
