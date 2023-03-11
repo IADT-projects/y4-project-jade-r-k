@@ -56,7 +56,7 @@ const IxDForm = () => {
                         <Card.Title>{FormTitle[page]}</Card.Title>
                         </Card.Body>
                         <Card.Footer>
-                            {/* <PageDisplay/> */}
+                            <PageDisplay/>
                             <div>
                                 {page !== 0 && page !== 4 ? (
                                     <FormButton
@@ -70,14 +70,9 @@ const IxDForm = () => {
                                 <FormButton
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    if (page === FormTitle.length - 1) {
-                                        window.alert("Are you done with the registration");
-                                        window.location.reload();
-                                    } else {
-                                        setPage((currPage) => currPage + 1);
-                                    }
+                                    setPage((currPage) => currPage + 1);
                                 }}
-                                text={page !== 3 ? "Next" : "Finish"}
+                                text={page !== 3 ? "Next" : "Get your quote"}
                                 />
                             </div>
                         </Card.Footer>
