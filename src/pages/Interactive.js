@@ -1,7 +1,10 @@
+import IxDForm from '../components/IxDForm';
+
 const Interactive = () => {
+
     return (
         <>
-        
+        <IxDForm />
         </>
     );
   };
