@@ -1,5 +1,5 @@
 import Form from 'react-bootstrap/Form';
-import React, { useState } from 'react';
+import React from 'react';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import Row from 'react-bootstrap/Row';
@@ -7,47 +7,13 @@ import Col from 'react-bootstrap/Col';
 
 const Property = () => {
 
-    const [text, setText] = useState('');
-    const [suggestions, setSuggestions] = useState([]);
-
-    const addresses = [
-        {
-            text: "1 Vines Ln, Dun Laoghaire, Dublin, WR99LU"
-        }
-    ]
-
-    const onSuggestHandler = (text) => {
-        setText(text);
-        setSuggestions([]);
-    };
-
-    const onChangeHandler = (text) => {
-        let matches = [];
-        if (text.length>4) {
-            matches = addresses.filter(address=>{
-                const regex = new RegExp(`${text}`,"gi");
-                return address.text.match(regex)
-            })
-        }
-        console.log('matches', matches);
-        setSuggestions(matches);
-        setText(text);
-    };
-
     return (
         <>
         <br/>
             <Form.Group>
                 <Form.Label>Please enter the address or Eircode of the property</Form.Label>
-                <Form.Control type="input"
-                onChange={e => onChangeHandler(e.target.value)}
-                value={text}  />
-                {suggestions && suggestions.map((suggestion,i)=>
-                <div className='suggestion'
-                onClick={()=>onSuggestHandler(suggestion.text)}
-                 key={i}>{suggestion.text}</div>)}
+                <Form.Control type="input" />
             </Form.Group>
-            <br/>
             <Form.Group>
                 <Form.Label>Are you the owner or a tenant?</Form.Label>
                 <br/>

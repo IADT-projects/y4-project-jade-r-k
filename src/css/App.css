@@ -5,3 +5,20 @@
 .radio-button {
     border-right: 20px !important;
 }
+
+.suggestion{
+    cursor: pointer;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    background-color: white;
+    border-radius: 4px;
+    padding-top: 5px;
+    padding-left: 12px;
+    padding-bottom: 5px;
+}
+
+.suggestion:hover{
+    background-color: #3297FD;
+    color: white;
+}
