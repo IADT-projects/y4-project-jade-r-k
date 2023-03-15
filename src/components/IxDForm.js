@@ -35,10 +35,10 @@ const IxDForm = () => {
     return (
         <>
         <br/>
-        <Container>
+        <Container style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%'}}>
             <Form>
                 <Col>
-                    <Card>
+                    <Card style={{ width: '500px' }}>
                         <Card.Body>
                         <br/>
                     <ProgressBar now={ 
