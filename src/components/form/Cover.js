@@ -39,6 +39,7 @@ const Cover = () => {
                     </ToggleButton>
                 </ToggleButtonGroup>
             </Form.Group>
+            <p>TENANTS can only select cover for contents</p>
             <br/>
             {showBuildCont && <div>
                         <Form.Group>

@@ -29,6 +29,7 @@ const Static = () => {
                 <Form.Label>Please enter the address or Eircode of the property</Form.Label>
                 <Form.Control type="input" />
             </Form.Group>
+            <br/>
             <Form.Group>
                 <Form.Label>Are you the owner or a tenant?</Form.Label>
                 <br/>
@@ -41,6 +42,22 @@ const Static = () => {
                     </ToggleButton>
                 </ToggleButtonGroup>
             </Form.Group>
+            <br/>
+                <Form.Group>
+                    <Form.Label>If you are an OWNER, how do you use your property?</Form.Label>
+                    <br/>
+                    <ToggleButtonGroup type="radio" name="use">
+                        <ToggleButton variant="outline-secondary" id="use-1" value={1}>
+                            I LIVE IN IT
+                        </ToggleButton>
+                        <ToggleButton variant="outline-secondary" id="use-2" value={2}>
+                            I RENT IT OUT
+                        </ToggleButton>
+                        <ToggleButton id="use-3" variant="outline-secondary" value={3}>
+                            IT'S A HOLIDAY HOME
+                        </ToggleButton>
+                    </ToggleButtonGroup>
+                </Form.Group>
             <br/>
             <Form.Group>
                 <Form.Label>What type of building is it?</Form.Label>
@@ -178,9 +195,10 @@ const Static = () => {
                     </ToggleButton>
                 </ToggleButtonGroup>
             </Form.Group>
+            <p>TENANTS can only select cover for contents.</p>
             <br/>
             <Form.Group>
-                <Form.Label>What is the approximate rebuilding cost?</Form.Label>
+                <Form.Label>What is the approximate rebuilding cost? (Building Cover)</Form.Label>
                 <Row>
                 <Col xs={6}>
                 <InputGroup>
@@ -192,7 +210,7 @@ const Static = () => {
             </Form.Group>
             <br/>
             <Form.Group>
-                <Form.Label>How much contents cover do you need?</Form.Label>
+                <Form.Label>How much contents cover do you need? (Contents Cover)</Form.Label>
                 <Row>
                     <Col xs={6}>
                 <InputGroup>
@@ -329,6 +347,19 @@ const Static = () => {
                 <Form.Control type="input" placeholder='YYYY' />
                 </Col>
                 </Row>
+            </Form.Group>
+            <br/>
+            <Form.Group>
+                <Form.Label>Gender</Form.Label>
+                <br/>
+                <ToggleButtonGroup type="radio" name="gender">
+                    <ToggleButton variant="outline-secondary" id="gender-1" value={1}>
+                    MALE
+                    </ToggleButton>
+                    <ToggleButton variant="outline-secondary" id="gender-2" value={2}>
+                        FEMALE
+                    </ToggleButton>
+                </ToggleButtonGroup>
             </Form.Group>
             <br/>
             <Form.Group>

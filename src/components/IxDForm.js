@@ -76,7 +76,7 @@ const IxDForm = () => {
                                         setPage((currPage) => currPage + 1);
                                       }
                                 }}
-                                text={page !== 3 ? "Next" : "Get your quote"}
+                                text={page !== 3 ? "Next" : "Get your quote →"}
                                 />
                             </div>
                         </Card.Footer>
