@@ -4,7 +4,12 @@ import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
+import { useState } from 'react';
+
 const Personal = () => {
+
+    const [show, setShow] = useState(false);
 
     return (
         <>
@@ -13,16 +18,16 @@ const Personal = () => {
                 <Form.Label>Title</Form.Label>
                 <br/>
                 <ToggleButtonGroup type="radio" name="title">
-                    <ToggleButton variant="outline-secondary" id="title-1" value={1}>
+                    <ToggleButton variant="outline-secondary" id="title-1" value={1} onClick={()=>setShow(false)}>
                     MR
                     </ToggleButton>
-                    <ToggleButton variant="outline-secondary" id="title-2" value={2}>
+                    <ToggleButton variant="outline-secondary" id="title-2" value={2} onClick={()=>setShow(false)}>
                     MRS
                     </ToggleButton>
-                    <ToggleButton variant="outline-secondary" id="title-3" value={3}>
+                    <ToggleButton variant="outline-secondary" id="title-3" value={3} onClick={()=>setShow(false)}>
                     MS
                     </ToggleButton>
-                    <ToggleButton variant="outline-secondary" id="title-4" value={4}>
+                    <ToggleButton variant="outline-secondary" id="title-4" value={4} onClick={()=>setShow(true)}>
                     DR
                     </ToggleButton>
                 </ToggleButtonGroup>
@@ -49,6 +54,21 @@ const Personal = () => {
                 </Col>
                 </Row>
             </Form.Group>
+            {show && <div>
+            <br/>
+            <Form.Group>
+                <Form.Label>Gender</Form.Label>
+                <br/>
+                <ToggleButtonGroup type="radio" name="gender">
+                    <ToggleButton variant="outline-secondary" id="gender-1" value={1}>
+                    MALE
+                    </ToggleButton>
+                    <ToggleButton variant="outline-secondary" id="gender-2" value={2}>
+                        FEMALE
+                    </ToggleButton>
+                </ToggleButtonGroup>
+            </Form.Group>
+            </div>}
             <br/>
             <Form.Group>
                 <Form.Label>Email address</Form.Label>
@@ -66,9 +86,16 @@ const Personal = () => {
             <br/>
             <Form.Group>
                 <Form.Label>What is your occupation?</Form.Label>
-                <Row><Col xs={10}>
-                <Form.Control type="input" />
-                </Col></Row>
+                    <Row>
+                        <Col xs={8}>
+                    <Form.Select aria-label="Default select example">
+                        <option></option>
+                        <option>Employed part time</option>
+                        <option>Employed full time</option>
+                        <option>Self employed</option>
+                    </Form.Select>
+                    </Col>
+                    </Row>
             </Form.Group>
             <br/>
         </>

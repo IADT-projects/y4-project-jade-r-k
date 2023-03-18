@@ -29,11 +29,13 @@ const Property = () => {
                 return address.text.match(regex)
             })
         }
-        console.log('matches', matches);
         setSuggestions(matches);
         setText(text);
     };
 
+    const [show, setShow] = useState(false);
+
+    
     return (
         <>
         <br/>
@@ -52,14 +54,35 @@ const Property = () => {
                 <Form.Label>Are you the owner or a tenant?</Form.Label>
                 <br/>
                 <ToggleButtonGroup type="radio" name="owner">
-                    <ToggleButton variant="outline-secondary" id="owner-1" value={1}>
+                    <ToggleButton variant="outline-secondary" id="owner-1" value={1} onClick={()=>setShow(true)}>
                     OWNER
                     </ToggleButton>
-                    <ToggleButton id="owner-2" variant="outline-secondary" value={2}>
+                    <ToggleButton id="owner-2" variant="outline-secondary" value={2} onClick={()=>setShow(false)}>
                     TENANT
                     </ToggleButton>
                 </ToggleButtonGroup>
             </Form.Group>
+
+            {
+                show && <div>
+                    <br/>
+                    <Form.Group>
+                        <Form.Label>How do you use your property?</Form.Label>
+                        <br/>
+                        <ToggleButtonGroup type="radio" name="use">
+                            <ToggleButton variant="outline-secondary" id="use-1" value={1}>
+                            I LIVE IN IT
+                            </ToggleButton>
+                            <ToggleButton variant="outline-secondary" id="use-2" value={2}>
+                            I RENT IT OUT
+                            </ToggleButton>
+                            <ToggleButton id="use-3" variant="outline-secondary" value={3}>
+                            IT'S A HOLIDAY HOME
+                            </ToggleButton>
+                        </ToggleButtonGroup>
+                    </Form.Group>
+                </div>
+            }
             <br/>
             <Form.Group>
                 <Form.Label>What type of building is it?</Form.Label>

@@ -1,5 +1,5 @@
 import Form from 'react-bootstrap/Form';
-import React from 'react';
+import React, { useState } from 'react';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -7,6 +7,10 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 const Cover = () => {
+
+    const [showBuildCont, setShowBuildCont] = useState(false);
+    const [showBuild, setShowBuild] = useState(false);
+    const [showCont, setShowCont] = useState(false);
 
     return (
         <>
@@ -24,41 +28,69 @@ const Cover = () => {
                 <Form.Label>What cover do you need?</Form.Label>
                 <br/>
                 <ToggleButtonGroup type="radio" name="building">
-                    <ToggleButton variant="outline-secondary" id="building-1" value={1}>
+                    <ToggleButton variant="outline-secondary" id="building-1" value={1} onClick={()=>{setShowBuildCont(true); setShowBuild(false); setShowCont(false);}}>
                     BUILDING AND CONTENTS
                     </ToggleButton>
-                    <ToggleButton variant="outline-secondary" id="building-2" value={2}>
+                    <ToggleButton variant="outline-secondary" id="building-2" value={2} onClick={()=>{setShowBuildCont(false); setShowBuild(false); setShowCont(true);}}>
                     CONTENTS ONLY
                     </ToggleButton>
-                    <ToggleButton variant="outline-secondary" id="building-3" value={3}>
+                    <ToggleButton variant="outline-secondary" id="building-3" value={3} onClick={()=>{setShowBuildCont(false); setShowBuild(true); setShowCont(false);}}>
                     BUILDING ONLY
                     </ToggleButton>
                 </ToggleButtonGroup>
             </Form.Group>
             <br/>
-            <Form.Group>
-                <Form.Label>What is the approximate rebuilding cost?</Form.Label>
-                <Row>
-                <Col xs={6}>
-                <InputGroup>
-                <InputGroup.Text>€</InputGroup.Text>
-                <Form.Control type="input" />
-                </InputGroup>
-                </Col>
-                </Row>
-            </Form.Group>
-            <br/>
-            <Form.Group>
-                <Form.Label>How much contents cover do you need?</Form.Label>
-                <Row>
-                    <Col xs={6}>
-                <InputGroup>
-                <InputGroup.Text>€</InputGroup.Text>
-                <Form.Control type="input" />
-                </InputGroup>
-                </Col>
-                </Row>
-            </Form.Group>
+            {showBuildCont && <div>
+                        <Form.Group>
+                        <Form.Label>What is the approximate rebuilding cost?</Form.Label>
+                        <Row>
+                        <Col xs={6}>
+                        <InputGroup>
+                        <InputGroup.Text>€</InputGroup.Text>
+                        <Form.Control type="input" />
+                        </InputGroup>
+                        </Col>
+                        </Row>
+                    </Form.Group>
+                    <br/>
+                    <Form.Group>
+                        <Form.Label>How much contents cover do you need?</Form.Label>
+                        <Row>
+                            <Col xs={6}>
+                        <InputGroup>
+                        <InputGroup.Text>€</InputGroup.Text>
+                        <Form.Control type="input" />
+                        </InputGroup>
+                        </Col>
+                        </Row>
+                    </Form.Group>
+                </div>}
+            {showCont && <div>
+                    <Form.Group>
+                            <Form.Label>How much contents cover do you need?</Form.Label>
+                            <Row>
+                                <Col xs={6}>
+                            <InputGroup>
+                            <InputGroup.Text>€</InputGroup.Text>
+                            <Form.Control type="input" />
+                            </InputGroup>
+                            </Col>
+                            </Row>
+                        </Form.Group>
+                </div>}
+            {showBuild && <div>
+                    <Form.Group>
+                            <Form.Label>What is the approximate rebuilding cost?</Form.Label>
+                            <Row>
+                            <Col xs={6}>
+                            <InputGroup>
+                            <InputGroup.Text>€</InputGroup.Text>
+                            <Form.Control type="input" />
+                            </InputGroup>
+                            </Col>
+                            </Row>
+                        </Form.Group>
+                </div>}
             <br/>
             <Form.Group>
                 <Form.Label>How many years have you had home insurance without making any claims?</Form.Label>
