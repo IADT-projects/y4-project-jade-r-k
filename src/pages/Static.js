@@ -9,6 +9,7 @@ import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+//This is the static form
 
 const Static = () => {
 
@@ -16,8 +17,10 @@ const Static = () => {
         <>
         <br/>
         <Container style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%'}}>
+        {/* Form start */}
         <Form>
             <Col xs={12} sm={12} md={10} lg={10} xl={10} xxl={10}>
+                {/* Property Section */}
             <Card>
                 <Card.Body>
                     <Card.Text>1/4</Card.Text>
@@ -155,6 +158,7 @@ const Static = () => {
             </Card.Footer>
             </Card>
             <br/>
+            {/* Cover Section */}
             <Card>
                 <Card.Body>
                     <Card.Text>2/4</Card.Text>
@@ -243,6 +247,7 @@ const Static = () => {
             </Card.Footer>
             </Card>
             <br/>
+            {/* Discounts Section */}
             <Card>
                 <Card.Body>
                     <Card.Text>3/4</Card.Text>
@@ -292,6 +297,7 @@ const Static = () => {
             </Card.Footer>
             </Card>
             <br/>
+            {/* Personal Section */}
             <Card>
                 <Card.Body>
                     <Card.Text>4/4</Card.Text>
@@ -378,9 +384,16 @@ const Static = () => {
             <br/>
             <Form.Group>
                 <Form.Label>What is your occupation?</Form.Label>
-                <Row><Col xs={10}>
-                <Form.Control type="input" />
-                </Col></Row>
+                    <Row>
+                        <Col xs={8}>
+                    <Form.Select aria-label="Default select example">
+                        <option></option>
+                        <option>Employed part time</option>
+                        <option>Employed full time</option>
+                        <option>Self employed</option>
+                    </Form.Select>
+                    </Col>
+                    </Row>
             </Form.Group>
             <br/>
             <Button style={{width: '100%'}} variant="primary" type="submit">

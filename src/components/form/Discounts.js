@@ -3,11 +3,15 @@ import React from 'react';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 
+//The discounts section of the form
+//This sections is just radio yes no selections
+
 const Discounts = () => {
 
     return (
         <>
         <br/>
+        {/* Form start */}
             <Form.Group>
                 <Form.Label>Does the property have a working burglar alarm?</Form.Label>
                 <br/>
@@ -46,6 +50,7 @@ const Discounts = () => {
                     </ToggleButton>
                 </ToggleButtonGroup>
             </Form.Group>
+            {/* Form close */}
             <br/>
         </>
     );

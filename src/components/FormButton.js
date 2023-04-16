@@ -1,5 +1,6 @@
 import Button from "react-bootstrap/Button";
 
+//button for form
 const FormButton = ({color, text, onClick, isDisabled}) => {
 
     return (

@@ -6,8 +6,11 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+//The cover section of the form
+
 const Cover = () => {
 
+    //The booleans for the responsive radio buttons
     const [showBuildCont, setShowBuildCont] = useState(false);
     const [showBuild, setShowBuild] = useState(false);
     const [showCont, setShowCont] = useState(false);
@@ -15,6 +18,7 @@ const Cover = () => {
     return (
         <>
         <br/>
+        {/* Form start */}
         <Form.Group>
                 <Form.Label>When would you like your cover to start?</Form.Label>
                 <Row>
@@ -41,6 +45,7 @@ const Cover = () => {
             </Form.Group>
             <p>TENANTS can only select cover for contents</p>
             <br/>
+            {/* Show build and contents inputs when certain radio button is selected */}
             {showBuildCont && <div>
                         <Form.Group>
                         <Form.Label>What is the approximate rebuilding cost?</Form.Label>
@@ -66,6 +71,7 @@ const Cover = () => {
                         </Row>
                     </Form.Group>
                 </div>}
+                {/* Show contents input when certain radio button is selected */}
             {showCont && <div>
                     <Form.Group>
                             <Form.Label>How much contents cover do you need?</Form.Label>
@@ -79,6 +85,7 @@ const Cover = () => {
                             </Row>
                         </Form.Group>
                 </div>}
+                {/* Show build input when certain radio button is selected */}
             {showBuild && <div>
                     <Form.Group>
                             <Form.Label>What is the approximate rebuilding cost?</Form.Label>
@@ -111,6 +118,7 @@ const Cover = () => {
                     </Col>
                     </Row>
             </Form.Group>
+            {/* Form Close */}
             <br/>
         </>
     );

@@ -7,13 +7,17 @@ import Col from 'react-bootstrap/Col';
 
 import { useState } from 'react';
 
+//The personal section of the form
+
 const Personal = () => {
 
+    //The boolean for the responsive radio buttons
     const [show, setShow] = useState(false);
 
     return (
         <>
         <br/>
+        {/* Form start */}
             <Form.Group>
                 <Form.Label>Title</Form.Label>
                 <br/>
@@ -54,6 +58,7 @@ const Personal = () => {
                 </Col>
                 </Row>
             </Form.Group>
+            {/* Show gender input when DR is selected */}
             {show && <div>
             <br/>
             <Form.Group>
@@ -97,6 +102,7 @@ const Personal = () => {
                     </Col>
                     </Row>
             </Form.Group>
+            {/* Form close */}
             <br/>
         </>
     );

@@ -5,8 +5,11 @@ import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+//The property section of the form
+
 const Property = () => {
 
+    //Setting up the varaibles for the auto complete search for the address
     const [text, setText] = useState('');
     const [suggestions, setSuggestions] = useState([]);
 
@@ -41,6 +44,7 @@ const Property = () => {
         <br/>
             <Form.Group>
                 <Form.Label>Please enter the address or Eircode of the property</Form.Label>
+                {/* When the input field is changed a suggestion appears that matches the current input */}
                 <Form.Control type="input"
                 onChange={e => onChangeHandler(e.target.value)}
                 value={text}  />
@@ -64,6 +68,7 @@ const Property = () => {
             </Form.Group>
 
             {
+                // show when owner is selected
                 show && <div>
                     <br/>
                     <Form.Group>

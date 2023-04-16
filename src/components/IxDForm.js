@@ -13,11 +13,14 @@ import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 
+//This page controls the interactive form so it is multistep
 const IxDForm = () => {
     const [page, setPage] = useState(0);
 
+    //The titles of the sections
     const FormTitle = ["About the property", "Your cover", "Discounts", "Personal Details"]
 
+    //displays the current form section
     const PageDisplay = () => {
         if (page === 0) {
             return <Property />
@@ -41,6 +44,7 @@ const IxDForm = () => {
                     <Card style={{ width: '500px' }}>
                         <Card.Body>
                         <br/>
+                        {/* Shows a progress bar for how much the form is completed */}
                     <ProgressBar now={ 
                         page === 0
                         ? 1
@@ -56,8 +60,10 @@ const IxDForm = () => {
                         <Card.Title>{FormTitle[page]}</Card.Title>
                         </Card.Body>
                         <Card.Footer>
+                            {/* Display the current page */}
                             <PageDisplay/>
                             <div>
+                                {/* Shows the correct buttons for the page displayed (prev and next/get quote) */}
                                 {page !== 0 && page !== 4 ? (
                                     <FormButton
                                     onClick={(e) => {

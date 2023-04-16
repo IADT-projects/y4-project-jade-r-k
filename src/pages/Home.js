@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom';
 
+//This is the home page
 const Home = () => {
 
     return (
@@ -10,6 +11,7 @@ const Home = () => {
         <br></br>
         <br></br>
         <div style={{textAlign: 'center'}}>
+            {/* Links to the different form designs */}
         <Button as={Link} to='/static/'>Static</Button>{' '}
         <Button as={Link} to='/interactive/'>Interactive</Button>
         </div>

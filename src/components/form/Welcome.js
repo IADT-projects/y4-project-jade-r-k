@@ -1,5 +1,7 @@
 const Welcome = () => {
 
+//Displays when the interactive form is complete
+
     return (
         <>
         <br/>

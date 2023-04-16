@@ -8,6 +8,8 @@ import Interactive from './pages/Interactive';
 
 import Navigation from './components/Navigation';
 
+//This is where the apps navigation is controlled
+
 function App() {
   return (
     <Router>
