@@ -6,5 +6,5 @@ The aim of this project was to conduct a comparative study on user experience an
 This web application was hosted using Firebase - [Static vs. Interactive](https://static-and-interactive-form.web.app)
 
 ## Thesis
-The thesis for this project is in the "Docs" folder inside a folder called "Thesis".
+The thesis for this project is in Docs/Thesis
 
